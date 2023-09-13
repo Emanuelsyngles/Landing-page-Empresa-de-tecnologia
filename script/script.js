@@ -1,6 +1,5 @@
-//Seleção
-
-let menuItem = document.querySelectorAll('.menu-lateral')
+//Seleção dos icones
+let menuItem = document.querySelectorAll('.item-menu')
 
 function selectLink() {
     menuItem.forEach((item) =>
@@ -9,11 +8,15 @@ function selectLink() {
     this.classList.add('ativo')
 }
 
+menuItem.forEach((item)=> 
+    item.addEventListener('click', selectLink)
+)
+
 //Expandir menu
 
 let btnExp = document.querySelector('#expandir')
 let menu = document.querySelector('.menu-lateral')
 
-btnExp.addEventListener('click', function() {
+btnExp.addEventListener('click' , function(){
     menu.classList.toggle('expandir')
 })
