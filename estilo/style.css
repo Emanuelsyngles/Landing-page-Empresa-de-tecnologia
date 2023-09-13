@@ -1,17 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bebas+Neue&family=Belanosima&family=Dancing+Script:wght@700&family=Kanit:wght@200&family=Poppins:wght@100;200;300;400;500;600;700&family=Rubik:wght@500&family=Titillium+Web:wght@600&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Kanit', sans-serif;
 }
+
 
 body {
     height: 100vh;
-    background-image: linear-gradient(to right,#0e70a4,#0c5b86 );
+    background-color: rgb(92, 92, 92);
 }
-
-/*Menu lateral*/
 
 nav.menu-lateral {
     width: 72px;
     height: 100%;
+    background-color: rgb(36, 36, 36);
+    padding: 40px 0px 40px 1%;
+    box-shadow: 3px -2px 1px 0px rgb(16, 93, 195);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
 }
+
+nav.menu-lateral.expandir {
+    width: 300px;
+    transition: .5s;
+}
+
+/*Botão que irá expandir o menu*/
+
+.btn-expandir {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/*listas*/
+
+ul {
+    height: 100%;
+    list-style: none;
+}
+
+ul > li.item-menu > a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+ul > li.ativo {
+    background-color: rgb(16, 94, 195);
+    box-shadow: -2px 0px 2px 0px white;
+}
+
+ul > li.item-menu:hover {
+    background-color: rgb(16, 93, 195);
+    transition: .3s;
+}
+
+ul > li.item-menu > a >.txt-link {
+    margin-left: 65px;
+    transition: .5s;
+}
+
+nav.menu-lateral.expandir .txt-link {
+    margin-left:40px;
+}
+
+ul > li.item-menu > a > .icon > i {
+    font-size: 25px;
+} 
