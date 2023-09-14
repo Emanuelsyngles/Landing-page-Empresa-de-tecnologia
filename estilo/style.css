@@ -82,3 +82,11 @@ nav.menu-lateral.expandir .txt-link {
 ul > li.item-menu > a > .icon > i {
     font-size: 25px;
 } 
+
+/*Principal*/
+
+h1{
+    text-align: center;
+    color: white;
+    font-size: 35px;
+}
